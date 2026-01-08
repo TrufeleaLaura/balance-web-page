@@ -145,6 +145,7 @@ export default function Quiz() {
   };
 
   const progress = ((currentQuestion + (showResult ? 1 : 0)) / questions.length) * 100;
+  const progressClass = `progress-${Math.round(progress / 5) * 5}`;
 
   return (
     <section
@@ -175,14 +176,7 @@ export default function Quiz() {
                   <span>{Math.round(progress)}% complete</span>
                 </div>
                 <div className="progress-bar">
-                  <div
-                    className="progress-fill"
-                    style={{ width: `${progress}%` }}
-                    role="progressbar"
-                    aria-valuenow={progress}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  />
+                  <div className={`progress-fill ${progressClass}`} />
                 </div>
               </div>
 

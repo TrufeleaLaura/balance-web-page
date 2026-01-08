@@ -98,7 +98,6 @@ export default function Resources() {
     <footer
       id="resources"
       className="section-padding bg-card-bg dark:bg-card-bg"
-      role="contentinfo"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
@@ -133,13 +132,13 @@ export default function Resources() {
                 <form onSubmit={handleSubmit} className="mb-6 p-4 bg-card-bg dark:bg-card-bg rounded-xl">
                   <div className="mb-4">
                     <label className="block text-sm font-medium mb-2">How are you feeling today?</label>
-                    <div className="flex gap-2" role="radiogroup" aria-label="Select your mood">
+                    <div className="grid grid-cols-3 sm:grid-cols-5 gap-2" role="radiogroup" aria-label="Select your mood">
                       {moodOptions.map((mood) => (
                         <button
                           key={mood.label}
                           type="button"
                           onClick={() => setFormData({ ...formData, mood: mood.label })}
-                          className={`flex-1 p-3 rounded-lg text-center transition-all ${
+                          className={`p-2 sm:p-3 rounded-lg text-center transition-all ${
                             formData.mood === mood.label
                               ? "bg-primary-blue text-white"
                               : "bg-background hover:bg-primary-light"
@@ -147,7 +146,7 @@ export default function Resources() {
                           role="radio"
                           aria-checked={formData.mood === mood.label}
                         >
-                          <span className="text-2xl block mb-1">{mood.emoji}</span>
+                          <span className="text-xl sm:text-2xl block mb-1">{mood.emoji}</span>
                           <span className="text-xs">{mood.label}</span>
                         </button>
                       ))}

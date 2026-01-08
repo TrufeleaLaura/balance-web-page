@@ -3,14 +3,14 @@
 import { useState } from "react";
 
 const lifeAreas = [
-  { id: "career", label: "Career", color: "#3B82F6" },
-  { id: "finances", label: "Finances", color: "#6366F1" },
-  { id: "health", label: "Health", color: "#14B8A6" },
-  { id: "relationships", label: "Relationships", color: "#EC4899" },
-  { id: "family", label: "Family", color: "#F59E0B" },
-  { id: "recreation", label: "Recreation", color: "#10B981" },
-  { id: "growth", label: "Personal Growth", color: "#8B5CF6" },
-  { id: "environment", label: "Environment", color: "#06B6D4" },
+  { id: "career", label: "Career", color: "#2563EB" },
+  { id: "finances", label: "Finances", color: "#4F46E5" },
+  { id: "health", label: "Health", color: "#0D9488" },
+  { id: "relationships", label: "Relationships", color: "#DB2777" },
+  { id: "family", label: "Family", color: "#D97706" },
+  { id: "recreation", label: "Recreation", color: "#059669" },
+  { id: "growth", label: "Personal Growth", color: "#7C3AED" },
+  { id: "environment", label: "Environment", color: "#0891B2" },
 ];
 
 export default function BalanceWheel() {
@@ -120,11 +120,9 @@ export default function BalanceWheel() {
                     <path
                       key={area.id}
                       d={generateWheelPath(index, scores[area.id])}
-                      fill={area.color}
                       fillOpacity="0.7"
-                      stroke={area.color}
                       strokeWidth="2"
-                      className="wheel-segment"
+                      className={`wheel-segment fill-${area.id}`}
                     />
                   ))}
 
@@ -200,13 +198,12 @@ export default function BalanceWheel() {
                         className="font-medium flex items-center gap-2"
                       >
                         <span
-                          className="w-3 h-3 rounded-full"
-                          style={{ backgroundColor: area.color }}
+                          className={`w-3 h-3 rounded-full bg-${area.id}`}
                           aria-hidden="true"
                         />
                         {area.label}
                       </label>
-                      <span className="text-lg font-semibold" style={{ color: area.color }}>
+                      <span className={`text-lg font-semibold color-${area.id}`}>
                         {scores[area.id]}
                       </span>
                     </div>
@@ -218,9 +215,6 @@ export default function BalanceWheel() {
                       value={scores[area.id]}
                       onChange={(e) => handleScoreChange(area.id, parseInt(e.target.value))}
                       className="w-full"
-                      aria-valuemin={1}
-                      aria-valuemax={10}
-                      aria-valuenow={scores[area.id]}
                       aria-label={`${area.label} score: ${scores[area.id]} out of 10`}
                     />
                     <div className="flex justify-between text-xs text-text-muted">

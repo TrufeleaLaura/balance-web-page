@@ -54,12 +54,12 @@ export default function Hero() {
 
             <defs>
               <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B82F6" />
-                <stop offset="100%" stopColor="#14B8A6" />
+                <stop offset="0%" stopColor="#2563EB" />
+                <stop offset="100%" stopColor="#0D9488" />
               </linearGradient>
               <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#3B82F6" />
-                <stop offset="100%" stopColor="#14B8A6" />
+                <stop offset="0%" stopColor="#2563EB" />
+                <stop offset="100%" stopColor="#0D9488" />
               </linearGradient>
             </defs>
           </svg>
@@ -72,9 +72,9 @@ export default function Hero() {
           BALANCE
         </h1>
 
-        <p className="text-xl md:text-2xl lg:text-3xl text-text-muted mb-4 font-light">
+        <h2 className="text-xl md:text-2xl lg:text-3xl text-text-muted mb-4 font-light">
           Finding Harmony in Life
-        </p>
+        </h2>
 
         <p className="text-base md:text-lg text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
           In a world that never stops, learning to balance work and life is not just important—it&apos;s essential.

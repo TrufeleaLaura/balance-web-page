@@ -165,7 +165,7 @@ export default function WhyItMatters() {
             >
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               <p className="text-text-muted mt-3 text-sm md:text-base">{stat.label}</p>
-              <p className="text-xs text-text-muted/70 mt-2">{stat.source}</p>
+              <p className="text-xs text-text-muted mt-2">{stat.source}</p>
             </div>
           ))}
         </div>
@@ -203,8 +203,7 @@ export default function WhyItMatters() {
           {benefits.map((benefit, index) => (
             <article
               key={benefit.title}
-              className="bg-background rounded-xl p-6 card-hover"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`bg-background rounded-xl p-6 card-hover animation-delay-${index}`}
             >
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary-blue to-primary-teal flex items-center justify-center text-white mb-4" aria-hidden="true">
                 {benefit.icon}

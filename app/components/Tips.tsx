@@ -208,14 +208,7 @@ export default function Tips() {
                 <span className="text-sm text-text-muted">{completedTips.size} / {currentTips.length} completed</span>
               </div>
               <div className="progress-bar">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${(completedTips.size / currentTips.length) * 100}%` }}
-                  role="progressbar"
-                  aria-valuenow={completedTips.size}
-                  aria-valuemin={0}
-                  aria-valuemax={currentTips.length}
-                />
+                <div className={`progress-fill progress-${Math.round((completedTips.size / currentTips.length) * 100 / 5) * 5 || 0}`} />
               </div>
             </div>
           </div>

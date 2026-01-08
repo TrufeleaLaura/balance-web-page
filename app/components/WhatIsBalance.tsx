@@ -84,8 +84,7 @@ export default function WhatIsBalance() {
           {pillars.map((pillar, index) => (
             <article
               key={pillar.title}
-              className="bg-card-bg dark:bg-card-bg rounded-xl p-6 md:p-8 card-hover text-center"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`bg-card-bg dark:bg-card-bg rounded-xl p-6 md:p-8 card-hover text-center animation-delay-${index}`}
             >
               <div
                 className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br ${pillar.color} flex items-center justify-center text-white`}

@@ -52,11 +52,9 @@ export default function Navigation() {
           ? "bg-white/95 dark:bg-black/95 shadow-lg backdrop-blur-sm"
           : "bg-transparent"
       }`}
-      role="banner"
     >
       <nav
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        role="navigation"
         aria-label="Main navigation"
       >
         <div className="flex items-center justify-between h-16 md:h-20">
