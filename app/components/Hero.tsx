@@ -102,7 +102,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bounce" aria-hidden="true">
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 bounce" aria-hidden="true">
         <a
           href="#what-is-balance"
           className="flex flex-col items-center text-text-muted hover:text-primary-blue transition-colors"
